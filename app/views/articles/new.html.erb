@@ -1,0 +1,13 @@
+<header>
+<h3>Wikinimous</h3>
+<h3><%=link_to 'New Article', '/articles/new'%></h3>
+</header>
+
+<div>
+
+<h1>New Article</h1>
+<%= render 'form', article: @article %>
+
+</div>
+
+<h5><%=link_to 'Back', '/articles'%></h5>

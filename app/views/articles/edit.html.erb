@@ -1,0 +1,29 @@
+<header>
+<h3>Wikinimous</h3>
+<h3><%=link_to 'New Article', '/articles/new'%></h3>
+</header>
+
+<div>
+
+<h1>Editing article</h1>
+<%= form_for @article do |f| %>
+  <div>
+    <%= f.label :title%>
+    <%= f.text_field :title %>
+    <%= f.value :@article.title %>
+  </div>
+  <div>
+    <%= f.label :content %>
+    <%= f.text_field :content%>
+    <%= f.value :@article.content %>
+  </div>
+  <div>
+  <%= f.submit %>
+  </div>
+<% end %>
+
+
+</div>
+
+<h5><%=link_to 'Show', path_to article_path(@article) %></h5>
+<h5><%=link_to 'Back', '/articles'%></h5>

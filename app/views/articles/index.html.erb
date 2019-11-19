@@ -1,0 +1,10 @@
+
+<header>
+<h3>Wikinimous</h3>
+<h3><%=link_to 'New Article', '/articles/new'%></h3>
+</header>
+
+<%@articles.each do |article|%>
+<h1><%= link_to article.title, article_path(article)%></h1>
+<p><%=article.content%></p>
+<%end%>
